@@ -22,4 +22,20 @@ public class AppTest extends FluentTest {
     goTo("http://localhost:4567/");
     assertThat(pageSource()).contains("Word Puzzle Game");
   }
+
+  @Test
+  public void isAllConstants() {
+    goTo("http://localhost:4567/");
+    fill("#userInput").with("tst");
+    submit(".btn");
+    assertThat(pageSource().contains("tst"));
+  }
+
+  @Test
+  public void isAllVowels() {
+    goTo("http://localhost:4567/");
+    fill("#userInput").with("aio");
+    submit(".btn");
+    assertThat(pageSource().contains("---"));
+  }
 }
