@@ -30,7 +30,7 @@ public void runWordPuzzle_getInputReturnCaseSensitive_userTyped() {
   public void runWordPuzzle_getInputAllVowelLowerReturnAllHyphen_userTyped() {
     WordPuzzle testWordPuzzle = new WordPuzzle();
     String userTyped = "iui";
-    assertEquals("-u-", testWordPuzzle.runWordPuzzle(userTyped));
+    assertEquals("---", testWordPuzzle.runWordPuzzle(userTyped));
     }
 
 /*the app gets the userTyped with one vowel and check if the method receive the input and replace the vowel to hyphen*/
