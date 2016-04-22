@@ -5,9 +5,10 @@ public class WordPuzzleTest {
 
 /*the app gets the userTyped with no vowel and returns the same, this test check if the method receive the input */
   @Test
-public void runWordPuzzle_getInputReturnSame_userTyped() {
+public void runWordPuzzle_getInputReturnSame_true() {
   WordPuzzle testWordPuzzle = new WordPuzzle();
-  assertEquals("tst", testWordPuzzle.runWordPuzzle("tst"));
+  String userTyped = "tst";
+  assertEquals(true, testWordPuzzle.runWordPuzzle(userTyped) instanceof String);
   }
 
 /*the app gets the userTyped including uppercase and lowercase and returns the same constants, this test check a case sensitive method*/
