@@ -13,12 +13,12 @@ public void runWordPuzzle_getInputReturnSame_userTyped() {
   assertEquals("tst", testWordPuzzle.runWordPuzzle("tst"));
   }
 
-// /*the app gets the userTyped with no vowel and returns the same in lowercase, this test check if the method receive the input and change the string to all lowercase*/
-//   @Test
-// public void runWordPuzzle_getInputReturnSameLowerCase_userTyped() {
-//   WordPuzzle testWordPuzzle = new WordPuzzle();
-//   assertEquals("tst", testWordPuzzle.runWordPuzzle("tSt"));
-//   }
+/*the app gets the userTyped including uppercase and lowercase and returns the same constants, this test check a case sensitive method*/
+  @Test
+public void runWordPuzzle_getInputReturnCaseSensitive_userTyped() {
+  WordPuzzle testWordPuzzle = new WordPuzzle();
+  assertEquals("tSt", testWordPuzzle.runWordPuzzle("tSt"));
+  }
 
 /*the app gets the userTyped with one vowel and check if the method receive the input and replace the vowel to hyphen*/
   @Test
@@ -35,5 +35,13 @@ public void runWordPuzzle_getInputReplaceOneVowelWithHyphen_userTyped() {
     String userTyped = "tEase";
     assertEquals("t--s-", testWordPuzzle.runWordPuzzle(userTyped));
     }
+
+    /*the app gets the userTyped with multiple vowels in a sentence and check if the method receive the input and replaceall the vowels to hyphen */
+      @Test
+    public void runWordPuzzle_getInputReplaceAllVowelSentenceWithHyphen_userTyped() {
+      WordPuzzle testWordPuzzle = new WordPuzzle();
+      String userTyped = "tEase In mind";
+      assertEquals("t--s- -n m-nd", testWordPuzzle.runWordPuzzle(userTyped));
+      }
 
 }

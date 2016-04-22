@@ -7,25 +7,38 @@ import static spark.Spark.*;
 
 public class App {
   public static void main(String[] args) {
-    // get("/", (request, response) -> {
-    //   Map<String, Object> model = new HashMap<String, Object>();
-    //   model.put("template", "templates/home.vtl");
-    //   return new ModelAndView(model, "templates/layout.vtl");
-    // }, new VelocityTemplateEngine());
-    //
-    // get("/detector", (request, response) -> {
-    //   Map<String, Object> model = new HashMap<String, Object>();
-    //
-    //   String userInput = request.queryParams("number");
-    //   NumbersToWords newNumbers = new NumbersToWords();
-    //   String convertedNumber = newNumbers.integerConverter(userInput);
-    //   model.put("convertedNumber", convertedNumber);
-    //
-    //   model.put("template", "templates/detector.vtl");
-    //   return new ModelAndView(model, "templates/layout.vtl");
-    // }, new VelocityTemplateEngine());
-  }
+    staticFileLocation("/public");
+    String layout = "templates/layout.vtl";
 
-  // public static String methodName(String inputVar) {}
+    get("/", (request, response) -> {
+      Map<String, Object> model = new HashMap<String, Object>();
+      model.put("template", "templates/home.vtl");
+      return new ModelAndView(model, "templates/layout.vtl");
+    }, new VelocityTemplateEngine());
+
+    get("/results", (request, response) -> {
+      Map<String, Object> model = new HashMap<String, Object>();
+
+      String inputtedString = request.queryParams("userInput");
+      WordPuzzle myWordPuzzle = new WordPuzzle();
+      String results = myWordPuzzle.runWordPuzzle(inputtedString);
+      model.put("results", results);
+      model.put("template", "templates/results.vtl");
+      return new ModelAndView(model, layout);
+    }, new VelocityTemplateEngine());
+
+    get("/hint", (request, response) -> {
+      Map<String, Object> model = new HashMap<String, Object>();
+
+      String help = request.queryParams("hintClicked");
+      WordPuzzle myWordPuzzle = new WordPuzzle();
+      String hint = myWordPuzzle.runWordPuzzle(help);
+      model.put("hint", hint);
+      model.put("template", "templates/hint.vtl");
+      return new ModelAndView(model, layout);
+    }, new VelocityTemplateEngine());
+
+
+  }
 
 }

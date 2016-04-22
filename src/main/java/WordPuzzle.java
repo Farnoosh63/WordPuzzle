@@ -1,25 +1,27 @@
 import java.util.ArrayList;
-//import java.util.HashMap;
+import java.util.HashMap;
 
 public class WordPuzzle {
 
   public static String runWordPuzzle(String word){
-    String newWord = new String();
+    // String newWord = new String(word);
     // newWord=word.toLowerCase(); //tEst -> test
 
     // String result = newWord.replace('e','-'); //"t-st"
-    char[] myWordChars = newWord.toCharArray(); //test -> [t,E,s,t]
+    char[] myWordChars = word.toCharArray(); //test -> [t,E,s,t]
     // String ifIsVowel = myWordChars.toString();
-    String result = "";
-    for(char vowel : myWordChars.toLowerCase()){
-      if (vowel == 'a' || vowel == 'e'|| vowel == 'i'|| vowel == 'o'|| vowel == 'u'){
-        result = newWord.replaceAll("[aeiou]","-");
-        result = newWord.replaceAll("[AEIOU]","-");
+    String methodResult = "";
+
+    for(char vowel : myWordChars){
+      //vowel case sensitivity
+      if (vowel == 'a' || vowel == 'A'|| vowel == 'e'|| vowel == 'E'|| vowel == 'i' || vowel == 'I'|| vowel == 'o'|| vowel == 'O'|| vowel == 'u'|| vowel == 'U'){
+        word = word.replaceAll("[aeiouAEIOU]","-");
+
       }else {
-        result = word;
+        methodResult = word;
       }
     } //end of for loop
 
-    return result;
+    return methodResult;
   }
 }
