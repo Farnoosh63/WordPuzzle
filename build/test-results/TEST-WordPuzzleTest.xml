@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="WordPuzzleTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2016-04-22T20:37:54" hostname="epicodus-31.local" time="0.002">
+<testsuite name="WordPuzzleTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2016-04-22T21:19:58" hostname="epicodus-31.local" time="0.001">
   <properties/>
-  <testcase name="runWordPuzzle_getInputAllVowelLowerReturnAllHyphen_userTyped" classname="WordPuzzleTest" time="0.001"/>
+  <testcase name="runWordPuzzle_getInputAllVowelLowerReturnAllHyphen_userTyped" classname="WordPuzzleTest" time="0.0"/>
   <testcase name="runWordPuzzle_getInputReturnCaseSensitive_userTyped" classname="WordPuzzleTest" time="0.0"/>
   <testcase name="runWordPuzzle_getInputReplaceAllVowelSentenceWithHyphen_userTyped" classname="WordPuzzleTest" time="0.0"/>
   <testcase name="runWordPuzzle_getInputReplaceAllVowelWithHyphen_userTyped" classname="WordPuzzleTest" time="0.001"/>
