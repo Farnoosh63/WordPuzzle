@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="WordPuzzleTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2016-04-22T20:23:05" hostname="epicodus-31.local" time="0.002">
+<testsuite name="WordPuzzleTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2016-04-22T20:26:26" hostname="epicodus-31.local" time="0.002">
   <properties/>
-  <testcase name="runWordPuzzle_getInputAllVowelLowerReturnAllHyphen_userTyped" classname="WordPuzzleTest" time="0.001"/>
+  <testcase name="runWordPuzzle_getInputAllVowelLowerReturnAllHyphen_userTyped" classname="WordPuzzleTest" time="0.0"/>
   <testcase name="runWordPuzzle_getInputReturnCaseSensitive_userTyped" classname="WordPuzzleTest" time="0.0"/>
-  <testcase name="runWordPuzzle_getInputReplaceAllVowelSentenceWithHyphen_userTyped" classname="WordPuzzleTest" time="0.001"/>
+  <testcase name="runWordPuzzle_getInputReplaceAllVowelSentenceWithHyphen_userTyped" classname="WordPuzzleTest" time="0.0"/>
   <testcase name="runWordPuzzle_getInputReturnSame_userTyped" classname="WordPuzzleTest" time="0.0"/>
   <testcase name="runWordPuzzle_getInputReplaceAllVowelWithHyphen_userTyped" classname="WordPuzzleTest" time="0.0"/>
   <testcase name="runWordPuzzle_getInputAllVowelUpperReturnAllHyphen_userTyped" classname="WordPuzzleTest" time="0.0"/>
+  <testcase name="runWordPuzzle_getInputAllVowelAllCaseReturnAllHyphen_userTyped" classname="WordPuzzleTest" time="0.0"/>
   <testcase name="runWordPuzzle_getInputReplaceOneVowelWithHyphen_userTyped" classname="WordPuzzleTest" time="0.0"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>

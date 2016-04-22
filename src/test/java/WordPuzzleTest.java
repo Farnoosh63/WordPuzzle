@@ -33,6 +33,14 @@ public void runWordPuzzle_getInputReturnCaseSensitive_userTyped() {
     assertEquals("---", testWordPuzzle.runWordPuzzle(userTyped));
     }
 
+  /*the app gets the userTyped all vowels both lower and uppercase in one word and returns hyphen, this test check the method for if works*/
+    @Test
+  public void runWordPuzzle_getInputAllVowelAllCaseReturnAllHyphen_userTyped() {
+    WordPuzzle testWordPuzzle = new WordPuzzle();
+    String userTyped = "uUEeaAiIooO";
+    assertEquals("-----------", testWordPuzzle.runWordPuzzle(userTyped));
+    }
+
 /*the app gets the userTyped with one vowel and check if the method receive the input and replace the vowel to hyphen*/
   @Test
 public void runWordPuzzle_getInputReplaceOneVowelWithHyphen_userTyped() {
