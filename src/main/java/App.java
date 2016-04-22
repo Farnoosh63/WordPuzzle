@@ -27,18 +27,6 @@ public class App {
       return new ModelAndView(model, layout);
     }, new VelocityTemplateEngine());
 
-    get("/hint", (request, response) -> {
-      Map<String, Object> model = new HashMap<String, Object>();
-
-      String help = request.queryParams("hintClicked");
-      WordPuzzle myWordPuzzle = new WordPuzzle();
-      String hint = myWordPuzzle.runWordPuzzle(help);
-      model.put("hint", hint);
-      model.put("template", "templates/hint.vtl");
-      return new ModelAndView(model, layout);
-    }, new VelocityTemplateEngine());
-
-
   }
 
 }
