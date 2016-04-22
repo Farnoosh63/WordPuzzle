@@ -7,8 +7,6 @@ public class WordPuzzleTest {
   @Test
 public void runWordPuzzle_getInputReturnSame_userTyped() {
   WordPuzzle testWordPuzzle = new WordPuzzle();
-  // String userTyped = new String();
-  //  userTyped.add("test");
   assertEquals("tst", testWordPuzzle.runWordPuzzle("tst"));
   }
 
