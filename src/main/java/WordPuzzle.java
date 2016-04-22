@@ -15,4 +15,5 @@ public class WordPuzzle {
 
     return word;
   }
+
 }
