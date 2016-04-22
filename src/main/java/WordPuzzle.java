@@ -3,8 +3,23 @@ import java.util.ArrayList;
 
 public class WordPuzzle {
 
-  public ArrayList<Object> runWordPuzzle(ArrayList<Object> word){
+  public static String runWordPuzzle(String word){
+    String newWord = new String();
+    // newWord=word.toLowerCase(); //tEst -> test
 
-    return word;
+    // String result = newWord.replace('e','-'); //"t-st"
+    char[] myWordChars = newWord.toCharArray(); //test -> [t,E,s,t]
+    // String ifIsVowel = myWordChars.toString();
+    String result = "";
+    for(char vowel : myWordChars.toLowerCase()){
+      if (vowel == 'a' || vowel == 'e'|| vowel == 'i'|| vowel == 'o'|| vowel == 'u'){
+        result = newWord.replaceAll("[aeiou]","-");
+        result = newWord.replaceAll("[AEIOU]","-");
+      }else {
+        result = word;
+      }
+    } //end of for loop
+
+    return result;
   }
 }
