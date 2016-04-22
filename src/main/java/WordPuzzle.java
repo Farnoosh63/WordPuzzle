@@ -10,18 +10,18 @@ public class WordPuzzle {
     // String result = newWord.replace('e','-'); //"t-st"
     char[] myWordChars = word.toCharArray(); //test -> [t,E,s,t]
     // String ifIsVowel = myWordChars.toString();
-    String methodResult = "";
+    // String methodResult = "";
 
     for(char vowel : myWordChars){
       //vowel case sensitivity
       if (vowel == 'a' || vowel == 'A'|| vowel == 'e'|| vowel == 'E'|| vowel == 'i' || vowel == 'I'|| vowel == 'o'|| vowel == 'O'|| vowel == 'u'|| vowel == 'U'){
         word = word.replaceAll("[aeiouAEIOU]","-");
 
-      }else {
-        methodResult = word;
+      // }else {
+      //   word=word;
       }
     } //end of for loop
 
-    return methodResult;
+    return word;
   }
 }
