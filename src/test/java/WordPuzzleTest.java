@@ -42,13 +42,13 @@ public void runWordPuzzle_getInputReturnCaseSensitive_userTyped() {
     assertEquals("-----------", testWordPuzzle.runWordPuzzle(userTyped));
     }
 
-/*the app gets the userTyped with one vowel and check if the method receive the input and replace the vowel to hyphen*/
-  @Test
-public void runWordPuzzle_getInputReplaceOneVowelWithHyphen_userTyped() {
-  WordPuzzle testWordPuzzle = new WordPuzzle();
-  String userTyped = "tEst";
-  assertEquals("t-st", testWordPuzzle.runWordPuzzle(userTyped));
-  }
+  /*the app gets the userTyped with one vowel and check if the method receive the input and replace the vowel to hyphen*/
+    @Test
+  public void runWordPuzzle_getInputReplaceOneVowelWithHyphen_userTyped() {
+    WordPuzzle testWordPuzzle = new WordPuzzle();
+    String userTyped = "tEst";
+    assertEquals("t-st", testWordPuzzle.runWordPuzzle(userTyped));
+    }
 
   /*the app gets the userTyped with multiple vowels and check if the method receive the input and replaceall the vowels to hyphen*/
     @Test
@@ -58,12 +58,12 @@ public void runWordPuzzle_getInputReplaceOneVowelWithHyphen_userTyped() {
     assertEquals("t--s-", testWordPuzzle.runWordPuzzle(userTyped));
     }
 
-    /*the app gets the userTyped with multiple vowels in a sentence and check if the method receive the input and replaceall the vowels to hyphen */
-      @Test
-    public void runWordPuzzle_getInputReplaceAllVowelSentenceWithHyphen_userTyped() {
-      WordPuzzle testWordPuzzle = new WordPuzzle();
-      String userTyped = "tEase In mind";
-      assertEquals("t--s- -n m-nd", testWordPuzzle.runWordPuzzle(userTyped));
-      }
+  /*the app gets the userTyped with multiple vowels in a sentence and check if the method receive the input and replaceall the vowels to hyphen */
+    @Test
+  public void runWordPuzzle_getInputReplaceAllVowelSentenceWithHyphen_userTyped() {
+    WordPuzzle testWordPuzzle = new WordPuzzle();
+    String userTyped = "tEase In mind";
+    assertEquals("t--s- -n m-nd", testWordPuzzle.runWordPuzzle(userTyped));
+    }
 
 }
