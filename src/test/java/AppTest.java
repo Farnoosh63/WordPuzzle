@@ -17,14 +17,12 @@ public class AppTest extends FluentTest {
   @ClassRule
   public static ServerRule server = new ServerRule();
 
-//test that our home page is running
   @Test
   public void rootTest() {
     goTo("http://localhost:4567/");
     assertThat(pageSource()).contains("Word Puzzle Game");
   }
 
-//test that our input is all constants and return same word
   @Test
   public void isAllConstants() {
     goTo("http://localhost:4567/");
@@ -33,7 +31,6 @@ public class AppTest extends FluentTest {
     assertThat(pageSource().contains("tst"));
   }
 
-//test our input is all vowel and return all hyphened
   @Test
   public void isAllVowels() {
     goTo("http://localhost:4567/");
@@ -42,7 +39,6 @@ public class AppTest extends FluentTest {
     assertThat(pageSource().contains("---"));
   }
 
-/*test our input is cointain vowel and constants and return constants with replacing the vowel with hyphen*/
   @Test
   public void isVowelAndConstants() {
     goTo("http://localhost:4567/");
@@ -51,7 +47,7 @@ public class AppTest extends FluentTest {
     assertThat(pageSource().contains("m-mmy"));
   }
 
-/*test our input is cointain vowel and constants and return constants with replacing the vowel with hyphen with case sensitivity*/
+
   @Test
   public void isVowelAndConstantsCaseSensitivity() {
     goTo("http://localhost:4567/");
@@ -60,14 +56,14 @@ public class AppTest extends FluentTest {
     assertThat(pageSource().contains("M-mmyJ--n"));
   }
 
-//test that our page result is running with no input
+
   @Test
   public void rootTestForResultPage() {
     goTo("http://localhost:4567/results?userInput=");
     assertThat(pageSource()).contains("Word Puzzle");
   }
 
-//test if the result page work with a userinput
+
   @Test
   public void isresultWorkWithUserinput() {
     goTo("http://localhost:4567/results?userInput=hello+world");
